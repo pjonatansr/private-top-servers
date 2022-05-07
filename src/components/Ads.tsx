@@ -1,11 +1,12 @@
-import { Box, Container, Heading, HStack, VStack } from "@chakra-ui/react"
+import { Box, Flex, Heading, HStack, VStack } from "@chakra-ui/react"
 
 export const Ads = (props: Record<string, unknown>) => {
 
   return (
-    <Container
+    <Flex
       {...props}
-      display={'flex'}
+      maxH='100vh'
+      display={'flex-item'}
       alignItems={'center'}
       justifyContent={'center'}
       textAlign={'center'}
@@ -13,14 +14,13 @@ export const Ads = (props: Record<string, unknown>) => {
       <HStack
       >
         <Box
-
         >
           <Heading>
             Ads
           </Heading>
         </Box>
       </HStack>
-    </Container >
+    </Flex >
   )
 }
 

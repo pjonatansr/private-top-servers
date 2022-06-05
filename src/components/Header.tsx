@@ -17,7 +17,6 @@ export const Header = ({ gameName, topQuantity, banner }: Props) => {
       bgImage={`url(${banner})`}
       bgSize={'cover'}
       bgPosition={'center'}
-      boxShadow={'0px 1px 5px #3339'}
     >
       <Box
         p={'1rem'}

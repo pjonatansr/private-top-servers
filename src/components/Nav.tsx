@@ -7,6 +7,8 @@ export function Nav() {
     minW={'100%'}
     minH={'60px'}
     p={'0 0.5em'}
+    bgColor='purple.100'
+    border={'1px solid #ccc'}
   >
     <Box
       maxW={"fit-content"}
@@ -24,6 +26,7 @@ export function Nav() {
         flexDir={'row-reverse'}
         flexWrap={'wrap-reverse'}
         justifyContent={'space-around'}
+
       >
         {[
           { name: 'Lineage 2', prefix: 'lineage' },
@@ -34,8 +37,22 @@ export function Nav() {
             <ListItem
               key={game.prefix}
               display={'inline-block'}
+              fontWeight={'bold'}
+              color='purple.600'
+              letterSpacing='wide'
+              fontSize={['xs', 'sm', 'md']}
+              textTransform='uppercase'
+              p={'1em'}
+              _hover={{
+                bgColor: 'purple.200',
+                borderRadius: '0.5em',
+                color: 'purple.900',
+              }}
             >
               <Link
+                _hover={{
+                  textDecoration: 'none',
+                }}
                 isExternal
                 href={`https://${game.prefix}-100pvts.netlify.app`}
               >
@@ -46,5 +63,5 @@ export function Nav() {
         })}
       </List>
     </Box>
-  </Flex>;
+  </Flex >;
 }

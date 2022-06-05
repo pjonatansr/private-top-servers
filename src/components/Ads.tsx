@@ -6,7 +6,7 @@ export const Ads = (props: Record<string, unknown>) => {
     <Flex
       {...props}
       maxH='100vh'
-      display={'flex-item'}
+      display={['none', 'none', 'none', 'flex-item']}
       alignItems={'center'}
       justifyContent={'center'}
       textAlign={'center'}

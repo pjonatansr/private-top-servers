@@ -7,51 +7,54 @@ export function Content() {
     minW={'70vw'}
     position={'relative'}
     maxH='70vh'
-    overflow={'scroll'}
+    overflowY={'scroll'}
   >
     <Flex
-      justifyContent={'flex-start'}
       minW={'100%'}
     >
       <Box
         m={0}
         p={0}
-        bgColor={'#fff'}
-        flexGrow={1}
+        flexGrow={0}
       >
         <Box
           pos={'sticky'}
           top={0}
         >
-          {
-            [...Array(10)].map((_, index) => {
-              return (
-                <List
-                  key={index}
-                  p={1.5}
-                  bgColor={'#fff'}
-                >
+          <List
+            overflow={'hidden'}
+            display={'flex'}
+            flexFlow={'row wrap'}
+          >
+            {
+              [...Array(10)].map((_, index) => {
+                return (
                   <ListItem
+                    key={index}
+                    display={'flex-item'}
+                    fontWeight={'bold'}
+                    borderBottom={'1px dotted #0000009f'}
+                    flex={'1 2 100%'}
                   >
                     <Link>
                       {`Option ${index + 1}`}
                     </Link>
                   </ListItem>
-                </List>
-              );
-            })
-          }
+                )
+              })
+            }
+          </List>
         </Box>
       </Box>
       <Box
         border={'1px solid #ccc'}
-        flexGrow={4}
+        flex={'1 0.5 100%'}
       >
         {Array(config.TOP_QUANTITY).fill(0).map((_, index) => {
           return (
             <Box
               key={index}
-              border={'1px solid #dedede'}
+              border={'0.11em solid #eee'}
               bgColor={'#fff'}
               minH={'150px;'}
             >
@@ -60,6 +63,6 @@ export function Content() {
           );
         })}
       </Box>
-    </Flex>
+    </Flex >
   </Box >);
 }

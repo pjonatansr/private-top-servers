@@ -7,7 +7,7 @@ export function Main() {
   >
     <Ads
       w='15vw'
-      bgColor={'#dff'} />
+      bgColor={'#eee'} />
     <HStack
       flexDir={'column'}
     >
@@ -16,11 +16,11 @@ export function Main() {
         top={'0'}
         minW={'100%'}
         minH='20vh'
-        bgColor={'#faf'} />
+        bgColor={'#eee'} />
       <Content />
     </HStack>
     <Ads
       w='15vw'
-      bgColor={'#ffd'} />
+      bgColor={'#eee'} />
   </Flex>;
 }
